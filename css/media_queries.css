@@ -1,0 +1,30 @@
+
+/******************************************/
+
+/****MEDIA QUERIES*****/
+/***********************/
+/* Smartphones (landscape) ----------- */
+@media screen and (max-width: 1315px) {
+	#menu-items{display:none;}
+	#smint-menu-button{display:block;}
+	#mobile-header{width: 100%;}
+	#side-menu{left: -250px;}
+	#menu-overlay{display: none;}
+}
+
+@media screen and (max-width: 1000px) {
+	.page{padding: 20px;}	
+	.container{margin-left: 2%;margin-right: 2%;}
+	.form{width: 100%;}
+}
+
+@media screen and (max-width: 600px) {
+	h1.fs-hu{font-size: 2.0rem;}
+	.tabs dd{width: 100%}
+	#social-buttons{width: 100%;}	
+}
+
+@media screen and (max-width: 500px){
+	.page{padding: 10px;}
+	
+}

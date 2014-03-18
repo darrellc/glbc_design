@@ -1,0 +1,353 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+a{text-decoration: none; color: #333;}
+a:hover{text-decoration: underline;}
+p{text-align: justify;}
+p,a,div{font-family: 'Alef';}
+h1,h2,h3,h4,h5,h6{font-family: 'IM Fell DW Pica'}
+
+/*Backgrounds*/
+/*Dark Red*/
+.c-dr{color: #7d1c1f;}
+h1.c-dr{text-shadow: 2px 2px 3px #808080;}
+/*Off White*/
+.c-ow{color: #f1f1f1;}
+h1.c-ow{text-shadow: 2px 2px 3px #2e2e2e;}
+/*Dark Brown*/
+.c-dbr{color: #CCCFA1;}
+h1.c-dbr{text-shadow: 2px 2px 3px #2e2e2e;}
+/*Light gray */
+.c-lgr{color: #808080;}
+a.c-lgr:hover{color: #f1f1f1;}
+/*Dark gray */
+.c-dgr{color: #353535;}
+.ff-pica{font-family: 'IM Fell DW Pica';}
+.ff-alef{font-family: 'Alef';}
+
+.bg-ow{background: #f1f1f1;}
+.bg-dgr{background: #1c1c1c;}
+.bg-w{background: #ffffff;}
+
+.bdrz-circle{border-radius: 50%;-webkit-border-radius: 50%;}
+.bd-dgr{border: 1px solid rgb(49, 49, 49);}
+
+.line{border: 1px solid #cccccc;height: 50px;width: 0px;margin: 10px auto;opacity: .6;filter: alpha(opacity=60);}
+.divider{border: 1px solid rgb(49,49,49);width: 50%;margin: 50px auto;opacity: .6;filter: alpha(opacity=60);border-radius: 5px;-webkit-border-radius: 5px;}
+
+.tabs{margin:auto;width: 101%;}
+.tabs>dd>a{padding: .5rem;box-sizing: border-box;background: none;color: #f1f1f1;text-align: center;font-family: 'Alef';margin: .3em;border-radius: 5px; -webkit-border-radius: 5px;}
+.tabs>dd.active>a{color: #333;}
+.tabs>dd>a:hover{background: #f1f1f1;color: #333;text-decoration: none;}
+
+.tabs-content>.content{padding: 20px;}
+.container{margin-left: 5%; margin-right: 5%;}
+
+#smint-side-menu>a:hover{background: #292929;color: #f1f1f1;text-decoration: none;}
+#smint-side-menu>a.active{background: #7d1c1f;color: #f1f1f1;}
+#header{border-bottom-color: #7d1c1f;background: #fff;}
+#header img{height: 90px;width: auto;}
+#menu-items a{background: #fff;transition: background .25s ease-in-out;-moz-transition: background .25s ease-in-out;-webkit-transition: background .25s ease-in-out;position: relative;}
+
+#smint-menu-button{
+	background: #7d1c1f;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	right: .5em;
+	top: 1.4em;
+}
+
+
+#menu-items a.active{background: #7d1c1f;color: #fff;position: relative;}
+#menu-items a:hover{background: #ddd;color: #333;text-decoration: none;}
+#menu-items a.no-bg{background: none;}
+#lighthouse-info{width:100%; background: url(../img/lighthouse-large.png) no-repeat 50% 20%;height: 500px;z-index:-1;position: relative;}
+#lighthouse-info h1{bottom: 10%; color: white;}
+/*Boxes*/
+#welcome-box{background: #F2F2F2;}
+
+#services-box{background: #7D1C1F;}
+
+#salvation-box{background: #7d1c1f;}
+
+#beliefs-box{background: #F2ECCB;}
+
+#pastor-box{background: #FFFFFF;}
+
+#expect-box{background: #524E41;}
+#contact-box input,textarea{color: #f1f1f1;border: 1px solid rgb(49, 49, 49);background: transparent;transition: background .25s ease-in-out;-moz-transition: background .25s ease-in-out;-webkit-transition: background .25s ease-in-out;}
+#contact-box input:focus, textarea:focus{background: #000;}
+#submit-button{background: transparenttransition: background .25s ease-in-out;-moz-transition: background .25s ease-in-out;-webkit-transition: background .25s ease-in-out;}
+#submit-button:hover{background: #000;}
+
+#social-buttons a{display:block;}
+#social-buttons a img{height: 60px;opacity: .2;filter: alpha(opacity=20);}
+#social-buttons a:hover img{opacity: .6;filter: alpha(opacity=60);}
+
