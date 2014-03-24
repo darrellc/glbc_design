@@ -56,7 +56,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				var scrollSpeed = settings.scrollSpeed;
 			}
 			//Fill the menu
-			var id = $(this).attr("id");
+			var id = $(this).attr("data-id");
 			smint.menuLocations.push({
 				"start": $("div."+id).position().top-smint.menuHeight,
 				"end": $("div."+id).outerHeight()+$("div."+id).position().top,
@@ -78,20 +78,24 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				}
 				//Check if the position is inside then change the menu
 				// Courtesy of Ryan Clarke (@clarkieryan)
-				
+				//I need to check the location 
 				if(smint.menuLocations[index].start <= scrollTop && scrollTop <= smint.menuLocations[index].end){	
+					var current = $("a[data-smint][data-id="+id+"]");
 					if(direction == "up"){
-						$("#"+id).addClass("active");
-						$("#"+smint.menuLocations[index+1].id).removeClass("active");
+						$(current).addClass("active");
+						var after = $("a[data-smint][data-id="+smint.menuLocations[index+1].id+"]");
+						$(after).removeClass("active");
 					} else if(index > 0) {
-						$("#"+id).addClass("active");
-						$("#"+smint.menuLocations[index-1].id).removeClass("active");
+						$(current).addClass("active");
+						var before = $("a[data-smint][data-id="+smint.menuLocations[index-1].id+"]");
+						$(before).removeClass("active");
 					} else if(direction === undefined){
-						$("#"+id).addClass("active");
+						$(current).addClass("active");
 					}
 					$.each(smint.menuLocations, function(i){
 						if(id != smint.menuLocations[i].id){
-							$("#"+smint.menuLocations[i].id).removeClass("active");
+							var none = $("a[data-smint][data-id="+smint.menuLocations[i].id+"]");
+							$(none).removeClass("active");
 						}
 					});
 				}
@@ -111,9 +115,12 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				stickyMenu(direction);
 				// Check if at bottom of page, if so, add class to last <a> as sometimes the last div
 				// isnt long enough to scroll to the top of the page and trigger the active state.
+				console.log($(window).scrollTop() + $(window).height());
+				console.log($(document).height());
 				if($(window).scrollTop() + $(window).height() == $(document).height()) {
        				smint.menuItems.removeClass('active');
-       				smint.menuItems.last().addClass('active');
+					$(".smint a[data-smint]").last().addClass("active");
+					$("#smint-side-menu").last().addClass("active");
    				}
 			});
 
@@ -122,7 +129,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
         		// stops empty hrefs making the page jump when clicked
 				e.preventDefault();
 				// get id pf the button you just clicked
-		 		var id = $(this).attr('id');
+		 		var id = $(this).attr('data-id');
 		 		// if the link has the smint-disable class it will be ignored 
 		 		// Courtesy of mcpacosy ‏(@mcpacosy)
                 if ($(this).hasClass("smint-disable")){
