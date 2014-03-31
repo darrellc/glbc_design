@@ -21,8 +21,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 		
 		//Set the top bar
 		smint.topBar = $(this);
-		
-		
 		smint.topBar.addClass('smint');
 		smint.menuHeight = smint.topBar.outerHeight();
 		
@@ -49,7 +47,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 		//Combine current menuItems and newly created side menu items.
 		smint.sideMenu.find("a[data-smint]").attr("data-side", "true");
 		smint.menuItems = smint.topBar.find("a[data-smint]").add(smint.sideMenu.find("a[data-smint]"));
-		console.log(smint.menuItems.length);
 		
 		smint.menuItems.each(function(index){
 			if ( settings.scrollSpeed ) {
@@ -115,8 +112,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				stickyMenu(direction);
 				// Check if at bottom of page, if so, add class to last <a> as sometimes the last div
 				// isnt long enough to scroll to the top of the page and trigger the active state.
-				console.log($(window).scrollTop() + $(window).height());
-				console.log($(document).height());
 				if($(window).scrollTop() + $(window).height() == $(document).height()) {
        				smint.menuItems.removeClass('active');
 					$(".smint a[data-smint]").last().addClass("active");
